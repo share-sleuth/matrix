@@ -23,13 +23,15 @@
 
 <footer>
 <div id="footer-inner" class="wrap">
-&copy; Sharesleuth.com 2011. All Rights Reserved.<br />
+<p>&copy; Sharesleuth.com 2011. All Rights Reserved.</p>
 <% if user_signed_in? %>
   You are signed in as <%= link_to( current_user.email, edit_user_registration_path) %>
     <%= link_to('Logout', destroy_user_session_path) %>        
   <% else %>
     <%= link_to('Staff Login', new_user_session_path)  %>  
   <% end %>
+
+<p><small>V Alligator 0.1 Alpha</small></p>
 
 </div>  
 </footer>
