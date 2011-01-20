@@ -1,25 +1,26 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Name:</b>
-  <%= @entity.name %>
-</p>
+<h1>
+   <%= @entity.name %>
+</h1>
 
 <p>
-  <b>Description:</b>
+    <%= assign_entity_type(@entity.entity_type) %>
+</p>
+
+
+<p>
   <%= @entity.description %>
 </p>
 
-<p>
+<!-- <p>
   <b>Story:</b>
   <%= @entity.story %>
-</p>
-
-<p>
-  <b>Type:</b>
-  <%= assign_entity_type(@entity.entity_type) %>
-</p>
+</p> -->
 
 
+
+<% if user_signed_in? %>
 <%= link_to 'Edit', edit_entity_path(@entity) %> |
+<% end %>
 <%= link_to 'Back', entities_path %>

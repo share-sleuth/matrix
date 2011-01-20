@@ -7,9 +7,32 @@
   <%= csrf_meta_tag %>
 </head>
 <body>
-<header>Sharesleuth Matrix</head>
 
-<%= yield %>
+<header>
+  <div id="header-inner" class="wrap">
+    <h1>Sharesleuth Matrix</h1>
+  </div>
+</head>
+
+
+<article>
+<div class="wrap">
+ <%= yield %>
+</div> 
+</article>
+
+<footer>
+<div id="footer-inner" class="wrap">
+&copy; Sharesleuth.com 2011. All Rights Reserved.<br />
+<% if user_signed_in? %>
+  You are signed in as <%= link_to( current_user.email, edit_user_registration_path) %>
+    <%= link_to('Logout', destroy_user_session_path) %>        
+  <% else %>
+    <%= link_to('Staff Login', new_user_session_path)  %>  
+  <% end %>
+
+</div>  
+</footer>
 
 </body>
 </html>

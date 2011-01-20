@@ -1,0 +1,14 @@
+body {background-color:#F5F5F5;}
+
+.wrap {width:1024px;margin:0 auto;}
+
+article {padding:10px;background-color:#fff;font-size:1.1em;}
+footer {background-color:#c0c0c0;padding:10px;font-size:.9em;}
+
+/*LISTS */
+li, ul {list-style:none;text-indent:none;margin:0px;padding:0px;}
+li {padding:5px 0px;}
+
+/* LABELS */
+.Person {background:#708090;color:#fff;padding:2px;}
+.Company {background:#B0C4DE;color:#fff;padding:2px;}
