@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110111213244) do
+ActiveRecord::Schema.define(:version => 20110120041820) do
 
   create_table "admins", :force => true do |t|
     t.string   "email",                               :default => "", :null => false
@@ -41,7 +41,7 @@ ActiveRecord::Schema.define(:version => 20110111213244) do
 
   create_table "entities", :force => true do |t|
     t.string   "name"
-    t.string   "description"
+    t.text     "description", :limit => 255
     t.integer  "story_id"
     t.integer  "user_id"
     t.integer  "entity_type"
