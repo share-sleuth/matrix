@@ -1,0 +1,8 @@
+SyntaxError: compile error
+/home/heroku_rack/lib/console.rb:150: syntax error, unexpected '=', expecting $end
+User.create :email = :password = :password_confirmation =
+                    ^
+	/home/heroku_rack/lib/console.rb:150
+	/home/heroku_rack/lib/console.rb:150:in `call'
+	:0
+	/usr/ruby1.8.7/lib/ruby/1.8/monitor.rb:242:in `synchronize'
