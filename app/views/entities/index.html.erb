@@ -1,27 +1,14 @@
 <h1>Sharesleuth Matrix</h1>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Description</th>
-    <th>Story</th>
-    <th>Admin</th>
-    <th>Type</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+
 
 <% @entities.each do |entity| %>
-  <tr>
-    <td><%= entity.name %></td>
-    <td><%= entity.description %></td>
-    <td><%= entity.story %></td>
-    <td><%= assign_entity_type(entity.entity_type) %></td>
-    <td><%= link_to 'Show', entity %></td>
-    <td><%= link_to 'Edit', edit_entity_path(entity) %></td>
-    <td><%= link_to 'Destroy', entity, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
+  <ul>
+    <li><%= link_to entity.name, entity %>
+    <span class="<%= entity.entity_name(entity.entity_type) %>"> <%= entity.entity_name(entity.entity_type) %></span>
+    <%= link_to 'Edit', edit_entity_path(entity) %>
+    <%= link_to 'Destroy', entity, :confirm => 'Are you sure?', :method => :delete %></li>
+  </ul>
 <% end %>
 </table>
 
